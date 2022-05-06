@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Capitalinaone';
+  src: url('src/fonts/Boodle-Black.otf');
+}
+
+@font-face {
+  font-family: 'Capitalinatwo';
+  src: url('src/fonts/Boodle-DemiBoldObl.otf');
+}
+
+@font-face {
+  font-family: 'Capitalinathree';
+  src: url('src/fonts/Boodle-Light.otf');
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1400 - 300)));
+  max-width: 1440px;
+  min-width: 360px;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+}
+html,
+body {
+  min-height: 100vh;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}

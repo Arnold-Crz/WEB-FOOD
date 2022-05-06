@@ -1,0 +1,127 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+  z-index: 10;
+  padding: 15px;
+  background-color: #FFFEFE;
+
+
+  & .navbar__logo {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 40px;
+    }
+
+    & h1 {
+      font-family: Capitalinaone;
+      color: #2F2F2F;
+      margin-left: 5px;
+
+      & span {
+        color: #ECAA37;
+      }
+    }
+  }
+
+  & ul {
+    position: fixed;
+    width: 55%;
+    height: 100%;
+    padding: 10px;
+    top: 0;
+    right: -500px;
+    background-color: #ECAA37;
+    transition: 0.5s ease-in-out;
+
+    &>div {
+      position: relative;
+      width: 100%;
+
+      & img {
+        position: absolute;
+        top: 5px;
+        right: 7px;
+      }
+    }
+
+    & li {
+      margin-top: 70px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+
+
+      &>a {
+
+        font-family: Capitalinatwo;
+        font-size: 1.8rem;
+        color: #FFFEFE;
+
+        &:hover {
+          color: #2F2F2F;
+        }
+      }
+
+      & .btnMenu {
+        margin-top: 20px;
+        background-color: #FE1618;
+        padding: 15px;
+        border-radius: 10px;
+
+        &>a {
+          color: #FFFEFE;
+          font-family: Capitalinatwo;
+          font-size: 1.5rem;
+
+        }
+
+        &:hover {
+          background-color: #fe161aad;
+
+        }
+      }
+
+      & .btnSocial {
+        display: flex;
+        margin-top: 40px;
+        width: 100%;
+        justify-content: end;
+        gap: 20px;
+        flex-direction: column;
+
+
+        & :nth-child(2) {
+          margin-left: 10px;
+        }
+
+        &>a {
+          display: flex;
+          gap: 10px;
+          font-family: Capitalinatwo;
+          font-size: 1.3rem;
+          color: #FFFEFE;
+          align-items: center;
+          justify-content: center;
+
+        }
+      }
+    }
+  }
+
+  & ul.active {
+    right: 0;
+  }
+
+  & .navbar__menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+  }
+}
