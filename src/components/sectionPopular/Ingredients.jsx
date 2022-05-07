@@ -1,29 +1,13 @@
 import BookIcon from '../../assets/book.svg';
 import styled from 'styled-components';
 
-const Dataingredients = [
-  'Tortillas a la Capitaliana',
-
-  'Huevo Revuelto',
-
-  'Tajadas de Platano Frito',
-
-  'Queso',
-
-  'Frijoles Fritos',
-
-  'Arroz',
-
-  'Cerdo | Pollo | Res',
-];
-
-function Ingredients() {
+function Ingredients({ dataingredients }) {
   return (
     <DivIngredientItem>
-      {Dataingredients.map((ingredient, index) => (
+      {dataingredients.map((ingredient, index) => (
         <div key={index}>
           <img src={BookIcon} alt="BookIcon" />
-          <h4>{ingredient}</h4>
+          <p>{ingredient}</p>
         </div>
       ))}
     </DivIngredientItem>
@@ -50,7 +34,7 @@ const DivIngredientItem = styled.div`
       height: 20px;
     }
 
-    h4 {
+    p {
       font-family: 'Capitalinathree';
       font-size: 1rem;
       color: #fffefe;

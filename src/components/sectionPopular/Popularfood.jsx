@@ -6,16 +6,25 @@ import Ingredients from './Ingredients';
 import IngredientesIcon from '../../assets/ingredientes.svg';
 import BurritaIcon from '../../assets/burrita.svg';
 import DescargaIcon from '../../assets/descarga.svg';
+import Imgfood from './Imgfood';
 
-function Popularfood({ title }) {
+function Popularfood({
+  title,
+  titleColor,
+  dataingredients,
+  precio,
+  imgpopular,
+}) {
   return (
     <>
-      <H1>{title}</H1>
+      <H1>
+        {title} <span>{titleColor}</span>{' '}
+      </H1>
       <DivIngredientTitle>
         <h2>Ingredientes</h2>
         <img src={IngredientesIcon} alt="IngredientesIcon" />
       </DivIngredientTitle>
-      <Ingredients />
+      <Ingredients dataingredients={dataingredients} />
       <DivBtn>
         <Btn
           icon={BurritaIcon}
@@ -30,6 +39,7 @@ function Popularfood({ title }) {
           bgcolor="#ecaa37"
         />
       </DivBtn>
+      <Imgfood precio={precio} imgpopular={imgpopular} />
     </>
   );
 }
@@ -50,6 +60,9 @@ const H1 = styled.div`
     left: 0;
     border-radius: 10px;
     border-bottom: 5px solid #f00;
+  }
+  > span {
+    color: #ecaa37;
   }
 `;
 
