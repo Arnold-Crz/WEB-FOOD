@@ -31,7 +31,7 @@ const DATA_POLLO = [
 
 function Home() {
   return (
-    <section>
+    <section className="Section_Home">
       <Popularfood
         title="Burritas"
         precio="Lps.50"
