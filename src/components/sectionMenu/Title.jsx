@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-function Title() {
+function Title({ title, subtitle }) {
   return (
     <TitleStyled>
       <div>
         <span></span>
         <h2>
-          Nuestro<span> Menú</span>
+          {title}
+          <span> {subtitle}</span>
         </h2>
         <span></span>
       </div>
