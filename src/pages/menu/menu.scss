@@ -1,5 +1,16 @@
 .Section_Menu {
+  overflow: hidden;
   margin-top: 150px;
   width: 100%;
   min-height: 100vh;
+  position: relative;
+
+}
+
+.Wrapper_fondo-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
 }
