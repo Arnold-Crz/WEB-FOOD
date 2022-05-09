@@ -1,5 +1,6 @@
-import React from 'react';
 import Popularfood from '../../components/sectionPopular/PopularFood';
+import Imgfood from '../../components/sectionPopular/Imgfood';
+
 import BuritaImg from '../../assets/burritaimg.png';
 import PolloImg from '../../assets/polloimg.png';
 
@@ -32,19 +33,14 @@ const DATA_POLLO = [
 function Home() {
   return (
     <section id="home" className="Section_Home">
-      <Popularfood
-        title="Burritas"
-        precio="Lps.50"
-        dataingredients={DATA_BURRITA}
-        imgpopular={BuritaImg}
-      />
+      <Popularfood title="Burritas" dataingredients={DATA_BURRITA} />
+      <Imgfood precio="lps.50" img={BuritaImg} top="-40px" right="-225px" />
       <Popularfood
         title="Pollo"
         titleColor="Chuco"
-        precio="Lps.100"
         dataingredients={DATA_POLLO}
-        imgpopular={PolloImg}
       />
+      <Imgfood precio="lps.100" img={PolloImg} top="-50px" left="10px" />
     </section>
   );
 }

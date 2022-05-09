@@ -6,15 +6,8 @@ import Ingredients from './Ingredients';
 import IngredientesIcon from '../../assets/ingredientes.svg';
 import BurritaIcon from '../../assets/burrita.svg';
 import DescargaIcon from '../../assets/descarga.svg';
-import Imgfood from './Imgfood';
 
-function Popularfood({
-  title,
-  titleColor,
-  dataingredients,
-  precio,
-  imgpopular,
-}) {
+function Popularfood({ title, titleColor, dataingredients }) {
   return (
     <>
       <H1>
@@ -39,7 +32,6 @@ function Popularfood({
           bgcolor="#ecaa37"
         />
       </DivBtn>
-      <Imgfood precio={precio} imgpopular={imgpopular} />
     </>
   );
 }
