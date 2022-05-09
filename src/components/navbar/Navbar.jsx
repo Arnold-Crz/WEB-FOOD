@@ -28,11 +28,10 @@ function Navbar() {
           <img src={Navclose} alt="menu" onClick={handleOpen} />
         </div>
         <li>
-          <a href="#inicio">Inicio</a>
+          <a href="#home">Inicio</a>
           <a href="#menu">Menu</a>
-          <a href="#ubicacion">Ubicacion</a>
-          <a href="#horarios">Horarios</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#ubication">Ubicacion</a>
+          <a href="#contact">Horarios</a>
           <div className="btnMenu">
             <a href="#">Descarga Menu</a>
           </div>

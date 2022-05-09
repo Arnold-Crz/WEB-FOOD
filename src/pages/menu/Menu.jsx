@@ -7,7 +7,7 @@ import './menu.scss';
 
 function Menu() {
   return (
-    <section className="Section_Menu">
+    <section id="menu" className="Section_Menu">
       <Title title="Nuestro" subtitle="Menú" />
       <CardsMenu />
       <Background />

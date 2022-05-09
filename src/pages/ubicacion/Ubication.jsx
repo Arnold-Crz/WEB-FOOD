@@ -6,7 +6,7 @@ import Title from '../../components/sectionMenu/Title';
 
 function Ubication() {
   return (
-    <section>
+    <section id="ubication">
       <Title title="Nuestra" subtitle="Ubicación" />
       <MapContainer
         center={[14.592594, -88.587456]}

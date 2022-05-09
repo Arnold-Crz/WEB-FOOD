@@ -1,0 +1,12 @@
+.section_contact {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 40px;
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 40px);
+  }
+}
