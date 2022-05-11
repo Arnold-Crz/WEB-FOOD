@@ -7,7 +7,7 @@ import IngredientesIcon from '../../assets/ingredientes.svg';
 import BurritaIcon from '../../assets/burrita.svg';
 import DescargaIcon from '../../assets/descarga.svg';
 
-function Popularfood({ title, titleColor, dataingredients }) {
+function Popularfood({ title, titleColor, dataingredients, link }) {
   return (
     <>
       <H1>
@@ -24,6 +24,7 @@ function Popularfood({ title, titleColor, dataingredients }) {
           text="Ordenar"
           color="#f0f0f0"
           bgcolor="#FE1618"
+          link={link}
         />
         <Btn
           icon={DescargaIcon}

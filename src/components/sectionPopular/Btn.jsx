@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
-function Btn({ icon, text, color, bgcolor }) {
+function Btn({ icon, text, color, bgcolor, link }) {
   return (
-    <Ancla color={color} bgcolor={bgcolor}>
-      <img src={icon} alt="icon" />
-      {text}
-    </Ancla>
+    <>
+      <Ancla href={link} color={color} bgcolor={bgcolor}>
+        <img src={icon} alt="icon" />
+        {text}
+      </Ancla>
+    </>
   );
 }
 

@@ -37,11 +37,11 @@ function Navbar() {
           </div>
           <div className="btnSocial">
             <img src={LogoTwo} alt="LogoTwo" />
-            <a href="#">
+            <a href="https://www.instagram.com/lacapitalina1301">
               <img src={Instagram} alt="Instagram" />
               Instagram
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/La-Capitalina-101820809147810/">
               <img src={Facebook} alt="Instagram" />
               facebook
             </a>
