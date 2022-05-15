@@ -135,5 +135,39 @@
     align-items: center;
     cursor: pointer;
 
+    .Wrapper_Cart {
+      position: relative;
+      background-color: #2F2F2F;
+      border-radius: 50%;
+      margin-right: 30px;
+      width: 40px;
+      height: 40px;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        font-family: Capitalinathree;
+        font-size: 1.1rem;
+        color: #fffefe;
+        background-color: #ECAA37;
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+
+      .Cart {
+        width: 25px;
+        height: 25px;
+        top: 8px;
+        left: calc(50% - 13px);
+        position: absolute;
+      }
+
+    }
   }
 }

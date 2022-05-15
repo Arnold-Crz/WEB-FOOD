@@ -6,6 +6,7 @@ import Navmenu from '../../assets/navmenu.svg';
 import Navclose from '../../assets/navclose.svg';
 import Facebook from '../../assets/face.svg';
 import Instagram from '../../assets/insta.svg';
+import Cart from '../../assets/cart.svg';
 
 import Logo from '../../assets/logo.png';
 import LogoTwo from '../../assets/logotwo.png';
@@ -49,6 +50,12 @@ function Navbar() {
         </li>
       </ul>
       <div className="navbar__menu">
+        <div>
+          <div className="Wrapper_Cart">
+            <span>1</span>
+            <img className="Cart" src={Cart} alt="Cart" />
+          </div>
+        </div>
         <img src={Navmenu} alt="menu" onClick={handleOpen} />
       </div>
     </nav>
