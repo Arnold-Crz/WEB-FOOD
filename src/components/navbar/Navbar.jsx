@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <img src={Logo} alt="logo" />
+        <img className="logo" src={Logo} alt="logo" />
         <h1>
           Capi<span>talina</span>
         </h1>
@@ -56,7 +56,12 @@ function Navbar() {
             <img className="Cart" src={Cart} alt="Cart" />
           </div>
         </div>
-        <img src={Navmenu} alt="menu" onClick={handleOpen} />
+        <img
+          className="Cart_Menu"
+          src={Navmenu}
+          alt="menu"
+          onClick={handleOpen}
+        />
       </div>
     </nav>
   );
