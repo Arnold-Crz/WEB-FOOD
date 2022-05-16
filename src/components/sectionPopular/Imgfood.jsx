@@ -5,7 +5,7 @@ import ImgPrecio from '../../assets/precio.svg';
 function Imgfood({ precio, img, top, right, left }) {
   return (
     <Wrapper>
-      <img src={img} alt="ImgBurritas" />
+      <img className="Popular_img" src={img} alt="ImgBurritas" />
       <ContainerPrecio top={top} right={right} left={left}>
         <div>
           <h2>{precio}</h2>
@@ -19,9 +19,12 @@ function Imgfood({ precio, img, top, right, left }) {
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  max-width: 100vw;
+  width: 95%;
+  margin: 0 auto;
   margin-top: 90px;
-  ~ img {
+
+  .Popular_img {
     max-width: 100%;
   }
 `;

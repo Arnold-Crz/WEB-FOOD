@@ -1,5 +1,6 @@
-import './navbar.scss';
 import { useState } from 'react';
+import { useCart } from '../../context/cartContext';
+
 import Navmenu from '../../assets/navmenu.svg';
 import Navclose from '../../assets/navclose.svg';
 import Facebook from '../../assets/face.svg';
@@ -7,10 +8,11 @@ import Instagram from '../../assets/insta.svg';
 import Cart from '../../assets/cart.svg';
 import Logo from '../../assets/logo.png';
 import LogoTwo from '../../assets/logotwo.png';
-import { useCart } from '../../context/cartContext';
+
+import './navbar.scss';
 
 function Navbar() {
-  const { setOpencart } = useCart();
+  const { setOpencart, getNumberItemCart } = useCart();
   const handleOpenToCart = () => {
     setOpencart(true);
   };
@@ -55,7 +57,7 @@ function Navbar() {
       <div className="navbar__menu">
         <div>
           <div onClick={handleOpenToCart} className="Wrapper_Cart">
-            <span>1</span>
+            <span>{getNumberItemCart()}</span>
             <img className="Cart" src={Cart} alt="Cart" />
           </div>
         </div>

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+import CartMas from './../../assets/cart-mas.svg';
 import Money from '../../assets/moneymenu.svg';
 
-function Card({ item }) {
+function Card({ item, handleToCart }) {
+  const handleClick = () => {
+    handleToCart(item);
+  };
   return (
     <WrapperCard>
       <img src={item.img} alt={item.title} />
@@ -10,11 +14,16 @@ function Card({ item }) {
         {item.title}
         <span>{item.sudtitle}</span>{' '}
       </h2>
-      <div>
+      <div className="Card_Precio">
         <p>{item.price}</p>
         <img src={Money} alt="Money" />
       </div>
-      <a href="#">Ordenar</a>
+      <div className="Btns_Order">
+        <a href="#">Ordenar</a>
+        <button onClick={handleClick}>
+          <img src={CartMas} alt="carrito agregar" />
+        </button>
+      </div>
     </WrapperCard>
   );
 }
@@ -31,8 +40,8 @@ const WrapperCard = styled.div`
   background-color: #ffffff;
   > img {
     margin-top: 15px;
-    width: 80%;
-    height: 80%;
+    width: 250px;
+    height: 250px;
   }
 
   > h2 {
@@ -44,7 +53,7 @@ const WrapperCard = styled.div`
     }
   }
 
-  > div {
+  .Card_Precio {
     position: absolute;
     display: flex;
     font-family: 'Capitalinaone';
@@ -61,21 +70,34 @@ const WrapperCard = styled.div`
     top: 15px;
     right: 10px;
   }
-  > a {
+
+  .Btns_Order {
     display: flex;
+    width: 80%;
+    height: 100px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    font-family: 'Capitalinaone';
-    text-decoration: none;
-    color: #f5f5f5;
-    padding: 15px 10px;
-    width: 120px;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #0d0d0d;
-    margin-bottom: 15px;
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Capitalinaone';
+      color: #f5f5f5;
+      text-transform: uppercase;
+      background-color: #0d0d0d;
+      padding: 15px 10px;
+      border-radius: 10px;
+    }
+    a {
+      text-decoration: none;
+      width: 120px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    button {
+      width: 100px;
+    }
   }
 `;
 

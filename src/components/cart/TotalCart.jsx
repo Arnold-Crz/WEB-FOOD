@@ -5,6 +5,8 @@ import { useCart } from '../../context/cartContext';
 import './styles.scss';
 
 function TotalCart() {
+  const { itemsCart, getSubtotal, getTotal, handleDeleteItem } = useCart();
+  const ITEM_TO_CART = itemsCart;
   const { Opencart, setOpencart } = useCart();
 
   const handleOpenToCart = () => {
@@ -18,33 +20,35 @@ function TotalCart() {
             <h3>Lista de Compras</h3>
             <img onClick={handleOpenToCart} src={ArrowUp} alt="ArrowUp" />
           </div>
-          <div className="Cart_Pedido">
-            <img
-              src="https://res.cloudinary.com/dr9rlr5vi/image/upload/v1652648005/Capitalina/burrita_nbrqgk.png"
-              alt="Burrita"
-            />
-            <div className="Cart_Pedido_title">
-              <h5>Burrita</h5>
-              <p>Precio:</p>
-              <p>Unidades:</p>
-              <p>Subtotal:</p>
-            </div>
-            <div className="Cart_Pedido_price">
-              <p>80</p>
-              <p>2</p>
-              <p>160</p>
-            </div>
-            <button>
-              <img src={Papelera} alt="" />
-            </button>
+          <div className="Cart_Pedido-Content">
+            {ITEM_TO_CART.map((item) => (
+              <div key={item.id} className="Cart_Pedido">
+                <img key={item.id} src={item.img} alt={item.largetitle} />
+                <div className="Cart_Pedido_title">
+                  <p>{item.largetitle}</p>
+                  <p>Precio:</p>
+                  <p>Unidades:</p>
+                  <p>Subtotal:</p>
+                </div>
+                <div className="Cart_Pedido_price">
+                  <p>{item.price}</p>
+                  <p>{item.qty}</p>
+                  <p>{getSubtotal(item)}</p>
+                </div>
+                <button onClick={() => handleDeleteItem(item)}>
+                  <img src={Papelera} alt="Eliminar" />
+                </button>
+              </div>
+            ))}
           </div>
-          <div className="Cart_total">
-            <div>
-              <h3>Total:</h3>
-              <p>160</p>
-            </div>
-            <a href="#">Enviar Pedido</a>
+        </div>
+
+        <div className={`Cart_total  ${Opencart ? 'active' : ''}`}>
+          <div>
+            <h3>Total:</h3>
+            <p>{getTotal()}</p>
           </div>
+          <a href={`#`}>Enviar Pedido</a>
         </div>
       </div>
     </>
