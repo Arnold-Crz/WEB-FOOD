@@ -39,7 +39,7 @@ export const MENU_ITEMS = [
     id: 5,
     title: 'Pupusas',
     sudtitle: 'Quesillo',
-    largetitle: 'Ppusas de Quesillo',
+    largetitle: 'Pusas de Quesillo',
     img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1652734415/Capitalina/Group_24_sgihnb.png',
     price: '50',
     qty: 0,

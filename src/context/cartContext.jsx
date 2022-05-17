@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 import { MENU_ITEMS } from './../data/dataMenu';
 
 const cartContext = createContext();
@@ -42,10 +42,23 @@ const CartProvider = ({ children }) => {
     return itemsCart.length;
   };
 
-  const sendOrden = () => {
-    alert('Orden Enviada');
-  };
+  const orderList = () => {
+    const orden = itemsCart.map((item) => {
+      let obj = {
+        PRODUCTO: item.largetitle,
+        PRECIO: item.price,
+        CANTIDAD: item.qty,
+      };
+      return obj;
+    });
 
+    /*   window.location.href =
+      'https://api.whatsapp.com/send/?phone=50433038039&text=Hola me gustaria ordenar ' +
+      JSON.stringify(orden).slice(1, -1) +
+      ' *TOTAL DE LA ORDEN:* ' +
+      getTotal() +
+      'Lps en cuanto tiempo estara lista ?'; */
+  };
   const DATA = {
     Opencart,
     setOpencart,
@@ -56,6 +69,7 @@ const CartProvider = ({ children }) => {
     getTotal,
     handleDeleteItem,
     getNumberItemCart,
+    orderList,
   };
 
   return <cartContext.Provider value={DATA}>{children}</cartContext.Provider>;

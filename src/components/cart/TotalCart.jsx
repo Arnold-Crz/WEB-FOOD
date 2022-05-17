@@ -1,12 +1,15 @@
+import { useCart } from '../../context/cartContext';
+
 import ArrowUp from '../../assets/angle-up.svg';
 import Papelera from '../../assets/papelera.svg';
-import { useCart } from '../../context/cartContext';
 
 import './styles.scss';
 
 function TotalCart() {
-  const { itemsCart, getSubtotal, getTotal, handleDeleteItem } = useCart();
+  const { itemsCart, getSubtotal, getTotal, handleDeleteItem, orderList } =
+    useCart();
   const ITEM_TO_CART = itemsCart;
+
   const { Opencart, setOpencart } = useCart();
 
   const handleOpenToCart = () => {
@@ -48,7 +51,8 @@ function TotalCart() {
             <h3>Total:</h3>
             <p>{getTotal()}</p>
           </div>
-          <a href={`#`}>Enviar Pedido</a>
+
+          <a onClick={() => orderList()}>Generar Pedido</a>
         </div>
       </div>
     </>
