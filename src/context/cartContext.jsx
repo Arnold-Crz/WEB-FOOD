@@ -43,7 +43,7 @@ const CartProvider = ({ children }) => {
   };
 
   const orderList = () => {
-    const orden = itemsCart.map((item) => {
+    const CART_ORDER = itemsCart.map((item) => {
       let obj = {
         PRODUCTO: item.largetitle,
         PRECIO: item.price,
@@ -52,12 +52,20 @@ const CartProvider = ({ children }) => {
       return obj;
     });
 
-    /*   window.location.href =
+    window.location.href =
       'https://api.whatsapp.com/send/?phone=50433038039&text=Hola me gustaria ordenar ' +
-      JSON.stringify(orden).slice(1, -1) +
+      JSON.stringify(CART_ORDER)
+        .slice(1, -1)
+        .replace(/["']/g, '')
+        .replace(/PRODUCTO/g, '*PRODUCTO*')
+        .replace(/PRECIO/g, '*PRECIO*')
+        .replace(/CANTIDAD/g, '*CANTIDAD*')
+        .replace(/,/g, '  ')
+        .replace(/{/g, '🛒')
+        .replace(/}/g, '....') +
       ' *TOTAL DE LA ORDEN:* ' +
       getTotal() +
-      'Lps en cuanto tiempo estara lista ?'; */
+      'Lps💵 en cuanto tiempo estara lista ?';
   };
   const DATA = {
     Opencart,
