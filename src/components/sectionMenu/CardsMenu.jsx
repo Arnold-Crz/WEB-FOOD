@@ -19,9 +19,9 @@ const WrapperCards = styled.div`
   margin-top: 40px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   gap: 40px;
 `;
 

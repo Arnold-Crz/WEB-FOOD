@@ -1,17 +1,9 @@
 import styled from 'styled-components';
 
-import ImgPrecio from '../../assets/precio.svg';
-
 function Imgfood({ precio, img, top, right, left }) {
   return (
     <Wrapper>
       <img className="Popular_img" src={img} alt="ImgBurritas" />
-      <ContainerPrecio top={top} right={right} left={left}>
-        <div>
-          <h2>{precio}</h2>
-          <img src={ImgPrecio} alt="ImgPrecio" />
-        </div>
-      </ContainerPrecio>
     </Wrapper>
   );
 }

@@ -1,3 +1,29 @@
+export const DATA_INGREDIENTES_BURRITAS = [
+  'Tortillas a la Capitaliana',
+
+  'Huevo Revuelto',
+
+  'Tajadas de Platano Frito',
+
+  'Queso',
+
+  'Frijoles Fritos',
+
+  'Arroz',
+
+  'Cerdo | Pollo | Res',
+];
+
+export const DATA_INGREDIENTES_POLLO = [
+  'Pollo Frito a la Capitaliana',
+
+  'Tajadas de Platano Frito | Papas Fritas',
+
+  'Salsas con el sabor de la Capitalina',
+
+  'Encurtido',
+];
+
 export const MENU_ITEMS = [
   {
     id: 1,

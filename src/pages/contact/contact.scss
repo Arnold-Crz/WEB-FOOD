@@ -1,8 +1,21 @@
 .section_contact {
   width: 100%;
-  min-height: 80vh;
+  min-height: 40vh;
   margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
 
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wrapper_horarios,
+  .wrapper_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .grid {
     display: grid;

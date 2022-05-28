@@ -35,7 +35,12 @@ const WrapperCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 85%;
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    height: 500px;
+  }
+
   border-radius: 15px;
   background-color: #ffffff;
   > img {

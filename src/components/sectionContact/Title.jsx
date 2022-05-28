@@ -10,7 +10,7 @@ function Title({ title, color, marginTop }) {
 
 const H2 = styled.h2`
   color: ${(props) => props.color || '#ecaa37'};
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Capitalinaone';
   margin-top: ${(props) => props.marginTop || '0'};
 `;
