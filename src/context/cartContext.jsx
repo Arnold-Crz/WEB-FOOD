@@ -51,21 +51,20 @@ const CartProvider = ({ children }) => {
       };
       return obj;
     });
-
-    window.location.href =
-      'https://api.whatsapp.com/send/?phone=50433038039&text=Hola me gustaria ordenar ' +
-      JSON.stringify(CART_ORDER)
-        .slice(1, -1)
-        .replace(/["']/g, '')
-        .replace(/PRODUCTO/g, '*PRODUCTO*')
-        .replace(/PRECIO/g, '*PRECIO*')
-        .replace(/CANTIDAD/g, '*CANTIDAD*')
-        .replace(/,/g, '  ')
-        .replace(/{/g, '🛒')
-        .replace(/}/g, '....') +
-      ' *TOTAL DE LA ORDEN:* ' +
-      getTotal() +
-      'Lps💵 en cuanto tiempo estara lista ?';
+    window.location.href = `https://api.whatsapp.com/send/?phone=50433038039&text=Hola%20me%20gustaria%20ordenar%0D%0A%0D%0A%2A${JSON.stringify(
+      CART_ORDER
+    )
+      .slice(1, -1)
+      .replace(/["']/g, '')
+      .replace(/,/g, '  ')
+      .replace(/{/g, '✅')
+      .replace(/PRODUCTO/g, '*PRODUCTO* ')
+      .replace(/PRECIO/g, '*PRECIO* ')
+      .replace(/CANTIDAD/g, '*CANTIDAD* ')
+      .replace(
+        /}/g,
+        '%0D%0A%0D%0A%2A'
+      )}*TOTAL%20DE%20LA%20ORDEN:*%20${getTotal()}Lps💵%20en%20cuanto%20tiempo%20estara%20lista%20?`;
   };
   const DATA = {
     Opencart,
