@@ -1,155 +1,144 @@
 .navbar {
+  width: 100%;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
-  max-width: 100vw;
-  width: 100%;
-  height: 5rem;
-  margin: 0 auto;
-  padding: 15px;
-  background-color: #FFFEFE;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
   z-index: 1000;
 
-
-
-  & .navbar__logo {
+  .navbar_logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
-    .logo {
-      width: 50px;
-      height: 50px;
+    img {
+      width: 3rem;
+      height: 3rem;
     }
 
-    & h1 {
-      font-family: Capitalinaone;
-      color: #2F2F2F;
-      margin-left: 5px;
-      font-size: 1.8rem;
+    h1 {
+      font-size: 1.5rem;
+      font-family: 'CapitalinaOne';
+      color: #333;
 
-      & span {
-        color: #ECAA37;
+      span {
+        color: #ecaa37;
       }
     }
   }
 
-  & ul {
-    position: fixed;
-    width: 55%;
-    top: 0;
-    min-height: 100vh;
-    height: 100%;
+  .navbar_content {
+    display: flex;
 
-    right: -1000px;
-    background-color: #ECAA37;
-    transition: 0.5s ease-in-out;
-    z-index: 1000;
-
-    &>div {
-      position: relative;
-      width: 100%;
-
-      & img {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-      }
+    .navbar_close {
+      display: none;
     }
 
-    & li {
-      margin-top: 70px;
+    .navbar_items {
       display: flex;
       align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      a {
+        font-size: 1.5rem;
+        font-family: 'CapitalinaOne';
+        color: #333;
+        transition: 0.3s;
+
+        &:hover {
+          color: #ecaa37;
+        }
+      }
+    }
+
+    .navbar_social {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
       flex-direction: column;
-      gap: 15px;
+      position: fixed;
+      top: 64px;
+      right: -1000px;
+      width: 100%;
+      height: 90vh;
+      background-color: #ecaa37;
+      transition: 0.5s ease-in-out;
 
-
-      &>a {
-
-        font-family: Capitalinatwo;
-        font-size: 1.8rem;
-        color: #FFFEFE;
-
-        &:hover {
-          color: #2F2F2F;
-        }
+      &.active {
+        right: 0;
       }
 
-      & .btnMenu {
-        margin-top: 20px;
-        background-color: #FE1618;
-        padding: 15px;
-        border-radius: 10px;
-
-        &>a {
-          color: #FFFEFE;
-          font-family: Capitalinatwo;
-          font-size: 1.5rem;
-
-        }
-
-        &:hover {
-          background-color: #fe161aad;
-
-        }
-      }
-
-      & .btnSocial {
+      .navbar_close {
         display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      .navbar_items {
+        margin-top: 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          font-size: 2.5rem;
+          color: #fffefe;
+        }
+      }
+
+      .navbar_social {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
-        width: 100%;
-        justify-content: end;
-        gap: 10px;
-        flex-direction: column;
+        flex-grow: 3;
 
-        >img {
-          width: 170px;
-          height: 170px;
+        .logo_empresa {
+          width: 10rem;
+          height: 10rem;
+          margin-bottom: 30px;
         }
 
-
-        & :nth-child(2) {
-          margin-left: 10px;
-        }
-
-        &>a {
+        a {
           display: flex;
-          gap: 10px;
-          font-family: Capitalinatwo;
-          font-size: 1.3rem;
-          color: #FFFEFE;
-          align-items: center;
           justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          color: #333;
+          font-size: 2rem;
+          font-family: 'CapitalinaOne';
+          ;
 
+          i {
+            font-size: 2rem;
+            color: #fffefe;
+          }
         }
       }
     }
   }
 
-  & ul.active {
-    right: 0;
-  }
-
-  & .navbar__menu {
+  .navbar_cart_menu {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
 
-    .Cart_Menu {
-      width: 30px;
-      height: 30px;
-    }
-
-    .Wrapper_Cart {
+    .wrapper_cart {
       position: relative;
       background-color: #2F2F2F;
       border-radius: 50%;
       margin-right: 30px;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
 
       span {
         display: flex;
@@ -170,15 +159,32 @@
 
       }
 
-      .Cart {
-        width: 25px;
-        height: 25px;
-        top: 8px;
-        left: calc(50% - 13px);
+      .cart_img {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        i {
+          font-size: 2.2rem;
+          color: #fffefe;
+        }
       }
 
-
     }
+
+    .cart_menu {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .cart_menu {
+        display: flex;
+      }
+    }
+
+
+
   }
+
 }

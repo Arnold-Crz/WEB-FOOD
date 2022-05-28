@@ -1,6 +1,4 @@
 import { useCart } from '../../context/cartContext';
-
-import ArrowUp from '../../assets/angle-up.svg';
 import Papelera from '../../assets/papelera.svg';
 
 import './styles.scss';
@@ -21,7 +19,9 @@ function TotalCart() {
         <div className="Cart_Content">
           <div className="Cart_header">
             <h3>Lista de Compras</h3>
-            <img onClick={handleOpenToCart} src={ArrowUp} alt="ArrowUp" />
+            <div className="down_arrow" onClick={handleOpenToCart}>
+              <i className="bx bxs-down-arrow"></i>
+            </div>
           </div>
           <div className="Cart_Pedido-Content">
             {ITEM_TO_CART.map((item) => (
