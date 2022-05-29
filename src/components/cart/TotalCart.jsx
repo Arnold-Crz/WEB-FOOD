@@ -49,7 +49,11 @@ function TotalCart() {
           <h3>Total:</h3>
           <p>Lps.{getTotal()}</p>
         </div>
-        <a onClick={() => orderList()}>Generar Pedido</a>
+        {itemsCart.length === 0 ? (
+          <h2>No tienes Productos</h2>
+        ) : (
+          <button onClick={() => orderList()}>Generar Pedido</button>
+        )}
       </div>
     </div>
   );

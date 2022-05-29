@@ -63,10 +63,10 @@
     @media screen and (max-width: 768px) {
       flex-direction: column;
       position: fixed;
-      top: 64px;
+      top: 57px;
       right: -1000px;
       width: 100%;
-      height: 90vh;
+      height: 95vh;
       background-color: #ecaa37;
       transition: 0.5s ease-in-out;
 
@@ -145,7 +145,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: -10px;
+        top: -5px;
         right: -5px;
         font-family: Capitalinathree;
         font-size: 1.1rem;
@@ -155,6 +155,7 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
+        z-index: 1;
         transition: 0.5s ease-in-out;
 
       }
@@ -173,13 +174,9 @@
 
     }
 
-    .cart_menu {
-      display: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      .cart_menu {
-        display: flex;
+    @media screen and (min-width: 768px) {
+      .navbar_menu {
+        display: none;
       }
     }
 
