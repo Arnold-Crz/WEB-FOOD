@@ -4,24 +4,20 @@
 }
 
 .Cart_Wrapper {
-
   position: relative;
   z-index: 1001;
   bottom: -1000px;
   transition: 0.5s ease-in-out;
 
   &.active {
-    bottom: 0;
+    bottom: 35px;
   }
 
   .Cart_Content {
-
     position: fixed;
-    max-width: 100vw;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--color-negro);
-
+    background-color: #0d0d0d;
 
     .Cart_header {
       width: 90%;
@@ -65,17 +61,21 @@
         padding: 10px;
         border-bottom: #f1f1f1 solid 2px;
 
-
+        @media screen and(min-width: 768px) {
+          justify-content: space-around;
+        }
 
         img {
           width: 65px;
           height: 65px;
 
+          @media screen and (min-width: 768px) {
+            width: 150px;
+            height: 150px;
+          }
         }
 
         .Cart_Pedido_title {
-
-
           p {
             font-size: 1.2rem;
             font-family: 'Capitalinathree';
@@ -120,9 +120,10 @@
     }
 
     div {
+      margin: 0 30px;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       font-family: 'Capitalinathree';
       font-size: 2.5rem;
       color: var(--color-blanco);
@@ -138,6 +139,13 @@
       color: var(--color-negro);
       font-family: 'Capitalinaone';
       font-size: 2.5rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #24c049;
+        color: #f1f1f1
+      }
     }
   }
 
